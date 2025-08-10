@@ -381,22 +381,27 @@
             "items": [
               {
                 "title": "protocol",
-                "key": "MMM-SynologySurveillance.config.ds[].protocol"
+                "key": "MMM-SynologySurveillance.config.ds[].protocol",
+                "onChange":"(evt,node)=>{let classes=['real','dummy'];let value=evt.target.value;let dummy = (value ==='mjpeg'?1:0);var parentElement=$(evt.target).closest('fieldset');let fs='div[class$=\"'+classes[dummy]+'\"]'; parentElement.find(fs).css('display','block');fs='div[class$=\"'+classes[(dummy?0:1)]+'\"]';parentElement.find(fs).css('display','none')}"
               },
               {
                 "title": "host",
+                "htmlClass":"hostreal",
                 "key": "MMM-SynologySurveillance.config.ds[].host"
               },
               {
                 "title": "port",
+                "htmlClass":"portreal",
                 "key": "MMM-SynologySurveillance.config.ds[].port"
               },
               {
                 "title": "user",
+                "htmlClass":"userreal",
                 "key": "MMM-SynologySurveillance.config.ds[].user"
               },
               {
                 "title": "password",
+                "htmlClass":"passwordreal",
                 "key": "MMM-SynologySurveillance.config.ds[].password"
               },
               {
@@ -410,26 +415,32 @@
                   "items": [
                     {
                       "title": "name",
+                      "htmlClass":"nameany",
                       "key": "MMM-SynologySurveillance.config.ds[].cams[].name"
                     },
                     {
                       "title": "alias",
+                      "htmlClass":"aliasany",
                       "key": "MMM-SynologySurveillance.config.ds[].cams[].alias"
                     },
                     {
                       "title": "profiles",
+                      "htmlClass":"profilesreal",
                       "key": "MMM-SynologySurveillance.config.ds[].cams[].profiles"
                     },
                     {
                       "title": "appendTimestampToCamUrl",
+                      "htmlClass":"appendTimestampToCamUrlreal",
                       "key": "MMM-SynologySurveillance.config.ds[].cams[].appendTimestampToCamUrl"
                     },
                     {
                       "title": "imgDecodeCheckInterval",
+                      "htmlClass":"imgDecodeCheckIntervalreal",
                       "key": "MMM-SynologySurveillance.config.ds[].cams[].imgDecodeCheckInterval"
                     },
                     {
                       "title": "url",
+                      "htmlClass":"urldummy",
                       "key": "MMM-SynologySurveillance.config.ds[].cams[].url"
                     }
                   ]
